@@ -1,118 +1,80 @@
-HALF_ADDER_SUBTRACTOR
+# HALF_ADDER_SUBTRACTOR
+
 Implementation-of-Half-Adder-and-Half Subtractor-circuit
 
-AIM:
+**AIM:**
 
 To design a half adder and half subtractor circuit and verify its truth table in Quartus using Verilog programming.
 
-Equipments Required:
+**Equipments Required:**
 
-Hardware – PCs, Cyclone II , USB flasher
+Hardware – PCs, Cyclone II , USB flasher 
 
 Software – Quartus prime Theory Adders are digital circuits that carry out the addition of numbers.
 
-Half Adder
+**Half Adder**
 
 Half adder is a combinational circuit that performs simple addition of two binary numbers. The input variables designate the augend and addend bits; the output variables produce the sum and carry. It is necessary to specify two output variables because the result may consist of two binary digits.
 
 Sum = A’B+AB’ =A ⊕ B Carry = AB
 
-image
+![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/bd4a0b2c-cdbc-4184-ab08-81578f121e1f)
 
 Figure -01 HALF ADDER
 
-Half Subtractor
+**Half Subtractor**
 
-The half-subtractor is a combinational circuit which is used to perform subtraction of two bits. It has two inputs, X (minuend) and Y (subtrahend) and two outputs D (difference) and B (borrow). To perform x - y, we have to check the relative magnitudes of x and y. If x ;;, y, we have three possibilities: 0 - 0 = 0, 1 - 0 = 1, and 1 - I = 0. The result is called the difference bit. If x < y, we have 0 - I, and it is necessary to borrow a 1 from the next higher stage. The I borrowed from the next higher stage adds 2 to the minuend bit, just as in the decimal system a borrow adds 10 to a minuend digit. With the minuend equal to 2, the difference becomes 2 - I = 1. The half-subtractor needs two outputs. One output generates the difference and will be designated by the symbol D. The second output, designated B for borrow, generates the binary signal that informs the next stage that a I has been borrowed.
+The half-subtractor is a combinational circuit which is used to perform subtraction of two bits. It has two inputs, X (minuend) and Y (subtrahend) and two outputs D (difference) and B (borrow). To perform x - y, we have to check the relative magnitudes of x and y. If x ;;, y, we have three possibilities: 0 - 0 = 0, 1 - 0 = 1, and 1 - I = 0. The result is called the difference bit. If x < y, we have 0 - I, and it is necessary to borrow a 1 from the next higher stage. The I borrowed from the next higher stage adds 2 to the minuend bit, just as in the decimal system a borrow adds 10 to a minuend digit. With the minuend equal to 2, the difference becomes 2 - I = 1. The half-subtractor needs two outputs. One output generates the difference and will be designated by the symbol D. The second output, designated B for borrow, generates the binary signal that informs the next stage that a I has been borrowed. 
 
-Diff = A’B+AB’ =A ⊕ B Borrow = A’B
+Diff = A’B+AB’ =A ⊕ B
+Borrow = A’B
 
-image
+ ![image](https://github.com/naavaneetha/HALF_ADDER_SUBTRACTOR/assets/154305477/d76b099c-513f-4e7c-843a-e2fd028a531a)
 
 Figure -02 HALF Subtractor
 
-Truthtable
+**Truthtable**
 
-HALF ADDER
+**Procedure**
 
-image
-HALF SUBTRACTOR
+1.	Type the program in Quartus software.
 
-image
-Procedure
+2.	Compile and run the program.
 
-Type the program in Quartus software.
+3.	Generate the RTL schematic and save the logic diagram.
 
-Compile and run the program.
+4.	Create nodes for inputs and outputs to generate the timing diagram.
 
-Generate the RTL schematic and save the logic diagram.
+5.	For different input combinations generate the timing diagram.
 
-Create nodes for inputs and outputs to generate the timing diagram.
 
-For different input combinations generate the timing diagram.
-
-Program:
+**Program:**
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-Developed by: APARNA.M
-
-RegisterNumber: 212223220008
-
-*/
-module half_add(a,b,sum,carry,D,Bo);
+~~~
+module exp3(a,b,C,D,S,B);
 input a,b;
-output sum,carry,D,Bo; // Outputs sum and carry for half adder:Outputs difference D,Borrow Bo for half subtractor
-xor(sum,a,b);
-and(carry,a,b);
-wire abar;
-not(abar,a);
-xor(D,a,b);
-and(Bo,abar,b);
+output C,D,S,B;
+assign S=a^b;
+assign C=a&b;
+assign D=a^b;
+assign B=~a&b;
 endmodule
-RTL Schematic
+~~~
+Developed by: RegisterNumber:*/ NETHRA.K (212224230184)
 
-image
+**RTL Schematic:**
 
-Output/TIMING Waveform
+![Screenshot 2025-04-09 111654](https://github.com/user-attachments/assets/fc8608b1-69b8-4722-bac6-68aadc8ae77e)
 
-image
 
-Result:
+**Output/TIMING Waveform:**
 
-The code is excecuted successfully.
+![Screenshot 2025-04-09 112034](https://github.com/user-attachments/assets/fd50bf5b-935d-4472-960d-afe8ba3f8723)
 
-About
-No description, website, or topics provided.
-Resources
- Readme
-License
- GPL-3.0 license
- Activity
-Stars
- 0 stars
-Watchers
- 0 watching
-Forks
- 0 forks
-Report repository
-Releases
-No releases published
-Packages
-No packages published
-Languages
-VHDL
-48.1%
- 
-Verilog
-17.8%
- 
-Stata
-16.7%
- 
-HTML
-16.0%
- 
-Standard ML
-1.4%
-Footer
+
+**Result:**
+  
+  Thus the Half-Adder-and-Half Subtractor-circuit is implemented.
+
