@@ -62,7 +62,7 @@ assign D=a^b;
 assign B=~a&b;
 endmodule
 ~~~
-Developed by: RegisterNumber:*/ NETHRA.K (212224230184)
+Developed by: Aparna RegisterNumber: 212223220008*/ 
 
 **RTL Schematic:**
 
