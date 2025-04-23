@@ -1,7 +1,5 @@
 HALF_ADDER_SUBTRACTOR
 Implementation-of-Half-Adder-and-Half Subtractor-circuit
-DEVELOPED BY: APARNA.M
-REG NO : 212223220008
 
 AIM:
 
@@ -31,15 +29,9 @@ Diff = A’B+AB’ =A ⊕ B Borrow = A’B
 
 image
 
-Figure-02 HALF Subtractor
+Figure -02 HALF Subtractor
 
-Truthtable Half Adder
-
-WhatsApp Image 2024-12-21 at 09 38 15_b042039a
-
-Half subtractor'
-
-WhatsApp Image 2024-12-21 at 09 38 09_d248f48c
+Truthtable
 
 Procedure
 
@@ -57,36 +49,62 @@ Program:
 
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-i)HALF ADDER
+Developed by: APARNA.M
 
-module ha(a,b,sum,carry);
+RegisterNumber: 212223220008
+
+module ex3(a,b,C,D,S,B);
 input a,b;
-output sum,carry;
-assign sum= (a ^ b);
-assign carry= ( a & b);
-endmodule
-
-ii)HALF SUBTRACTOR
-
-module hs(a,b,difference,borrow);
-input a,b;
-output difference,borrow;
-assign difference= (a ^ b);
-assign borrow= ( ~a & b);
+output S,D,C,B;
+assign S = a^b;
+assign C = a&b;
+assign D = a^b;
+assign B = ~a&b;
 endmodule
 RTL Schematic
 
-(i)half adder Screenshot 2024-11-15 132955
+430857693-0b804245-c3ad-423c-94b6-f4389df320e1
 
-(ii)half subtractor
+Output/TIMING Waveform
 
-Screenshot 2024-11-15 134529
+430860340-5176eb55-500d-46bb-8ca2-8c4547025d98
 
-TIMING Waveform
+Result:
 
-(i) half adder WhatsApp Image 2024-12-27 at 14 05 24_34684f0a
+Thus, the half adder and half subtractor verilog program has been sucessfully executed.
 
-(ii) half subtractor Screenshot 2024-11-15 134929
-
-Result: Thus the Half adder and half Subtractors are studied and the truth tables are verified.
-
+About
+No description, website, or topics provided.
+Resources
+ Readme
+License
+ GPL-3.0 license
+ Activity
+Stars
+ 0 stars
+Watchers
+ 0 watching
+Forks
+ 1 fork
+Report repository
+Releases
+No releases published
+Packages
+No packages published
+Languages
+VHDL
+48.1%
+ 
+Verilog
+17.8%
+ 
+Stata
+16.7%
+ 
+HTML
+16.0%
+ 
+Standard ML
+1.4%
+Footer
+© 2025 GitHub
